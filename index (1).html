@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solon Perfume - Luxury Scent, Affordable Elegance</title>
+
+    <style>
+        :root {
+            --maroon: #6B0F1A;
+            --gold: #D4AF37;
+            --ivory: #FFF8E7;
+            --dark: #2D1B1B;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: var(--ivory);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        /* NAVBAR */
+        nav {
+            background: var(--white);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            position: sticky;
+            top: 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--maroon);
+        }
+
+        .logo span {
+            color: var(--gold);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: var(--maroon);
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 80px 8%;
+            gap: 50px;
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .hero-text h1 {
+            font-size: 55px;
+            color: var(--maroon);
+            margin-bottom: 20px;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--maroon);
+            color: white;
+            padding: 14px 35px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: .3s;
+        }
+
+        .btn:hover {
+            background: var(--gold);
+            color: black;
+        }
+
+        .hero-image {
+            flex: 1;
+            text-align: center;
+        }
+
+        .hero-image img {
+            width: 380px;
+            max-width: 100%;
+        }
+
+        /* VALUE */
+        .section {
+            padding: 90px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 40px;
+            color: var(--maroon);
+            margin-bottom: 50px;
+        }
+
+        .value-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .card h3 {
+            color: var(--maroon);
+            margin-bottom: 10px;
+        }
+
+        /* PRODUCTS */
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .product {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .product img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .product-content {
+            padding: 20px;
+        }
+
+        .product-content h3 {
+            color: var(--maroon);
+            margin-bottom: 10px;
+        }
+
+        .product-price {
+            color: var(--maroon);
+            font-weight: 700;
+            margin-top: 8px;
+        }
+
+        /* TESTIMONI */
+        .testimonial {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        /* CTA */
+        .cta {
+            background: var(--maroon);
+            color: white;
+            text-align: center;
+            padding: 90px 8%;
+        }
+
+        .cta h2 {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .cta .btn {
+            background: var(--gold);
+            color: black;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #2D1B1B;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        @media(max-width:768px) {
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-text h1 {
+                font-size: 40px;
+            }
+
+            nav ul {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+        <div class="logo">Solon <span>Perfume</span></div>
+
+        <ul>
+            <li><a href="#home">Beranda</a></li>
+            <li><a href="#keunggulan">Keunggulan</a></li>
+            <li><a href="#produk">Produk</a></li>
+            <li><a href="#testimoni">Testimoni</a></li>
+            <li><a href="#kontak">Kontak</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+
+        <div class="hero-text">
+            <h1>The Essence of
+                Timeless Luxury</h1>
+
+            <p>
+                Perpaduan aroma premium eksklusif untuk,
+                mengekspresikan keunikan diri yang elegan & modern.
+            </p>
+
+            <a href="#produk" class="btn">Lihat Koleksi</a>
+        </div>
+
+        <div class="hero-image">
+            <img src="asset/4.png" alt="Solon Perfume">
+        </div>
+
+    </section>
+
+    <!-- VALUE -->
+    <section class="section" id="keunggulan">
+
+        <h2 class="section-title">Mengapa Solon Perfume?</h2>
+
+        <div class="value-grid">
+
+            <div class="card">
+                <h3>Luxury Inspired</h3>
+                <p>Aroma terinspirasi parfum premium dunia.</p>
+            </div>
+
+            <div class="card">
+                <h3>Long Lasting</h3>
+                <p>Ketahanan aroma hingga 8–12 jam.</p>
+            </div>
+
+            <div class="card">
+                <h3>Affordable</h3>
+                <p>Kualitas premium dengan harga terjangkau.</p>
+            </div>
+
+            <div class="card">
+                <h3>Elegant Design</h3>
+                <p>Kemasan eksklusif dan modern.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- PRODUK -->
+    <section class="section" id="produk">
+
+        <h2 class="section-title">Exclusive Signature of Solon</h2>
+
+        <div class="products">
+
+            <div class="product">
+                <img src="asset/1 (1).png">
+                <div class="product-content">
+                    <h3>Another Solon</h3>
+                    <p>Strength, Warmth, and Luxury.</p>
+                    <p class="product-price">Rp375.000</p>
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="asset/1.png">
+                <div class="product-content">
+                    <h3>D’Arcy Blood</h3>
+                    <p>Masculine Silence, Lasting Impact</p>
+                    <p class="product-price">Rp375.000</p>
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="asset/2.png">
+                <div class="product-content">
+                    <h3>Zephyr Tea</h3>
+                    <p>Clean, Classy, Effortless</p>
+                    <p class="product-price">Rp325.000</p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- TESTIMONI -->
+    <section class="section" id="testimoni">
+
+        <h2 class="section-title">Testimonials</h2>
+
+        <div class="testimonial-grid">
+
+            <div class="testimonial">
+                ⭐⭐⭐⭐⭐
+                <p>
+                    "Wanginya seperti parfum mahal,
+                    padahal harganya sangat terjangkau."
+                </p>
+            </div>
+
+            <div class="testimonial">
+                ⭐⭐⭐⭐⭐
+                <p>
+                    "Saya suka sekali dengan aromanya.
+                    Tahan lama dan membuat saya lebih percaya diri"
+                </p>
+            </div>
+
+            <div class="testimonial">
+                ⭐⭐⭐⭐⭐
+                <p>
+                    "Packaging premium dan aromanya elegan."
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- CTA -->
+    <section class="cta" id="kontak">
+
+        <h2>Temukan Signature Scent Anda</h2>
+
+        <p>
+            Tingkatkan kepercayaan diri dengan aroma yang meninggalkan kesan.
+        </p>
+
+        <br>
+
+        <a href="https://wa.me/6285111239729" class="btn">
+            Pesan Sekarang
+        </a>
+
+    </section>
+
+    <footer>
+        © 2026 Solon Perfume. All Rights Reserved.
+    </footer>
+
+</body>
+
+</html>
